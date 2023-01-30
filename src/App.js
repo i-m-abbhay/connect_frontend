@@ -1,12 +1,14 @@
 import "./App.css";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Home from "./container/Home";
+import Login from "./components/Login";
 
 function App() {
    return (
-      <div className="App  bg-slate-500 min-h-screen">
-         <p className="text-3xl font-bold underline text-secColor">
-            Edit <code>src/App.js</code> and save to reload.
-         </p>
-      </div>
+      <Routes>
+         <Route path="login" element={<Login />} />
+         <Route path="/*" element={<Home />} />
+      </Routes>
    );
 }
 
